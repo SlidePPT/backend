@@ -13,7 +13,7 @@ router.post("/check",(req,res)=>{
 
 router.post("/save",(req,res)=>{
     console.log("/save 접속")
-    controller.check(req,res);
+    controller.save(req,res);
 })
 
 

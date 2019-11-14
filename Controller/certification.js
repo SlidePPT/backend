@@ -8,7 +8,7 @@ db.defaults({ code:[] }).write()
 
 exports.make = (req,res) => {
 
-    console.log("make");
+    console.log("make",req.body);
 
     let ppt = {ppt : req.body.ppt}
     ppt.ppt._id = shortid.generate()
@@ -23,7 +23,7 @@ exports.make = (req,res) => {
 }
 
 exports.save = (req,res) => {
-    console.log("save")
+    console.log("save",req.body)
     db.get('code')
     .find({_id:req.body.ppt._id})
     .assign({template:req.body.ppt.template,number:req.body.ppt.number})
